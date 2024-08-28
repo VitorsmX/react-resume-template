@@ -267,7 +267,7 @@ export const testimonial: TestimonialSection = {
     {
       name: 'Valéria Duarte',
       text: 'Catálogo muito bem elaborado, com ótimo visual e de fácil entendimento. Profissional pontual, qualificado e comprometido com o que se propôs.',
-      image: 'https://ibb.co/4KwnkGk',
+      image: 'https://i.ibb.co/vVC69G9/fetiche-logo.jpg',
     },
   ],
 };
