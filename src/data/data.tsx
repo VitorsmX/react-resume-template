@@ -5,26 +5,17 @@ import {
   CalendarIcon,
   FlagIcon,
   MapIcon,
-  SparklesIcon,
 } from '@heroicons/react/24/outline';
 
 import GithubIcon from '../components/Icon/GithubIcon';
 import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
-import TwitterIcon from '../components/Icon/TwitterIcon';
-import heroImage from '../images/header-background.webp';
+import heroImage from '../images/header-background.webm';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
 import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
 import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
-import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
-import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
-import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
-import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
-import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
-import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
-import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import {
@@ -44,8 +35,8 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
-  description: "Example site built with Tim Baker's react resume template",
+  title: 'Portfolio Vitor',
+  description: 'Conheça sobre mim e crie seu website já!',
 };
 
 /**
@@ -53,13 +44,13 @@ export const homePageMeta: HomepageMeta = {
  */
 export const SectionId = {
   Hero: 'hero',
-  About: 'about',
-  Contact: 'contact',
-  Portfolio: 'portfolio',
-  Resume: 'resume',
-  Skills: 'skills',
-  Stats: 'stats',
-  Testimonials: 'testimonials',
+  About: 'Sobre',
+  Contact: 'Contato',
+  Portfolio: 'Portfolio',
+  Resume: 'Curriculo',
+  Skills: 'Habilidades',
+  Stats: 'Estatísticas',
+  Testimonials: 'Clientes',
 } as const;
 
 export type SectionId = (typeof SectionId)[keyof typeof SectionId];
@@ -69,31 +60,31 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  name: `Sou Vitor Mesquita.`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
+        Sou de Capanema no Pará e um <strong className="text-stone-100">Desenvolvedor Full Stack Javascript</strong>,
+        trabalhando no momento em <strong className="text-stone-100">Sistemas Web</strong>, os quais ajudam meus
+        clientes a ter uma posição na web, portfolio, e-commerce, compatível com dispositivos móveis.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+        Posso ajudar seu negócio a crescer, seja ele do tamanho que for, porque{' '}
+        <strong className="text-stone-100">qualquer um</strong>, pode ter uma presença digital com um pouco de vontade
+        de <strong className="text-stone-100">inovar</strong>
       </p>
     </>
   ),
   actions: [
     {
       href: '/assets/resume.pdf',
-      text: 'Resume',
+      text: 'Currículo',
       primary: true,
       Icon: ArrowDownTrayIcon,
     },
     {
       href: `#${SectionId.Contact}`,
-      text: 'Contact',
+      text: 'Contate-me',
       primary: false,
     },
   ],
@@ -104,16 +95,13 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  description: `Sou um desenvolvedor web apaixonado por criar soluções inovadoras e eficientes. Com experiência prática em tecnologias como React, Next.js, Tailwind, CSS3 e Typescript, ofereço serviços de desenvolvimento de websites e aplicações web que atendem às necessidades específicas de cada cliente.`,
   aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
+    {label: 'Onde Fico', text: 'Capanema, PA', Icon: MapIcon},
+    {label: 'Idade', text: `${new Date().getFullYear() - 2000}`, Icon: CalendarIcon},
+    {label: 'Nacionalidade', text: 'Brasileiro', Icon: FlagIcon},
+    {label: 'Formação', text: 'Faculdade Estácio de Castanhal/ FCAT', Icon: AcademicCapIcon},
+    {label: 'Emprego', text: 'Freelancer', Icon: BuildingOffice2Icon},
   ],
 };
 
@@ -122,36 +110,32 @@ export const aboutData: About = {
  */
 export const skills: SkillGroup[] = [
   {
-    name: 'Spoken languages',
+    name: 'Idiomas',
     skills: [
       {
-        name: 'English',
+        name: 'Português',
         level: 10,
       },
       {
-        name: 'French',
-        level: 4,
-      },
-      {
-        name: 'Spanish',
-        level: 3,
+        name: 'Inglês',
+        level: 6,
       },
     ],
   },
   {
-    name: 'Frontend development',
+    name: 'Desenvolvimento Front-End',
     skills: [
       {
-        name: 'React',
-        level: 9,
+        name: 'Next.js',
+        level: 8,
       },
       {
         name: 'Typescript',
         level: 7,
       },
       {
-        name: 'GraphQL',
-        level: 6,
+        name: 'SQL',
+        level: 5,
       },
     ],
   },
@@ -163,29 +147,12 @@ export const skills: SkillGroup[] = [
         level: 8,
       },
       {
-        name: 'Rust',
-        level: 5,
+        name: 'Express',
+        level: 7,
       },
       {
-        name: 'Golang',
+        name: 'Nest.js',
         level: 4,
-      },
-    ],
-  },
-  {
-    name: 'Mobile development',
-    skills: [
-      {
-        name: 'React Native',
-        level: 9,
-      },
-      {
-        name: 'Flutter',
-        level: 4,
-      },
-      {
-        name: 'Swift',
-        level: 3,
       },
     ],
   },
@@ -196,70 +163,28 @@ export const skills: SkillGroup[] = [
  */
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: 'Project title 1',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Portfolio Nase7e Produtora',
+    description: 'Portfolio digital otimizado para SEO que divulga o trabalho de Nailson Bulhões',
+    url: 'https://www.naseteprodutora.com.br/',
     image: porfolioImage1,
   },
   {
-    title: 'Project title 2',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Criação de Cartão de Visita',
+    description: 'Criação de Mídia Social para o Instagram de Instituição Religiosa GEU',
+    url: 'https://www.instagram.com/geu.grupo_espirita_uniao/',
     image: porfolioImage2,
   },
   {
-    title: 'Project title 3',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Criação de Mídia Social Para Campanha Política',
+    description: 'Campanha para vereador de Afrânio Feijão',
+    url: 'https://www.instagram.com/afranio.melo/',
     image: porfolioImage3,
   },
   {
-    title: 'Project title 4',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Catálogo Digital e Físico Fetiche',
+    description: 'Catalogo em PDF para divulgação de produtos íntimos',
+    url: 'https://drive.google.com/file/d/1W_MpzrvH84lF1-fMVxr8T4x9ZilxIy8c/view?usp=sharing',
     image: porfolioImage4,
-  },
-  {
-    title: 'Project title 5',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage5,
-  },
-  {
-    title: 'Project title 6',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage6,
-  },
-  {
-    title: 'Project title 7',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage7,
-  },
-  {
-    title: 'Project title 8',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage8,
-  },
-  {
-    title: 'Project title 9',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage9,
-  },
-  {
-    title: 'Project title 10',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage10,
-  },
-  {
-    title: 'Project title 11',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage11,
   },
 ];
 
@@ -268,39 +193,61 @@ export const portfolioItems: PortfolioItem[] = [
  */
 export const education: TimelineItem[] = [
   {
-    date: 'April 2007',
-    location: 'Clown college',
-    title: 'Masters in Beer tasting',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: 'Novembro, 2016',
+    location: 'São Pio X',
+    title: 'Ensino Fundamental e Médio',
+    content: (
+      <p>
+        Publicação de{' '}
+        <a
+          href="https://www.allprinteditora.com.br/vida-de-moleque-a-grande-aventura"
+          target="_blank"
+          className="font-semibold underline hover:text-blue-600">
+          LIVRO
+        </a>{' '}
+        e organização de peças de teatro e produção audio-visual
+      </p>
+    ),
   },
   {
-    date: 'March 2003',
-    location: 'School of Business',
-    title: 'What did you study 101',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: 'Novembro, 2017',
+    location: 'Colégio Professora Maria Goretti',
+    title: 'Ensino Médio Completo',
+    content: <p>Finalização do ensino médio em outra escola</p>,
+  },
+  {
+    date: 'Novembro, 2022',
+    location: 'Universidade Estácio de Castanhal/ FCAT',
+    title: 'Graduação Tecnológica',
+    content: (
+      <p>
+        Ministrei dois cursos livres em várias ocasiões, intitulados, "CURSO DE GIT E GITHUB SEM CODAR" e "CURSO DE
+        GOOGLE CLASSROOM", também prestei estágio pela universidade como desenvolvedor de software na área de
+        documentação para a empresa INFOTEMP
+      </p>
+    ),
   },
 ];
 
 export const experience: TimelineItem[] = [
   {
-    date: 'March 2010 - Present',
-    location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
+    date: 'Dezembro, 2023 - Março, 2024',
+    location: 'ÊXITOS',
+    title: 'Operador de suporte técnico - Estágio',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+        Prestação de suporte por telefone a clientes de serviços de internet, esclarecendo dúvidas, diagnosticando problemas e atendendo solicitações diversas, incluindo agendamento de visitas técnicas, se necessário.
       </p>
-    ),
+      ),
   },
   {
-    date: 'March 2007 - February 2010',
-    location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
+    date: 'Maio, 2024 - Atualmente',
+    location: 'Home-office',
+    title: 'Freelancer Full-Stack Developer',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+        EXPERIÊNCIA PRÁTICA em desenvolvimento de
+        websites como aplicações web com React, Next.js, Tailwind, CSS3, Typescript na IDE VScode.
       </p>
     ),
   },
@@ -313,19 +260,9 @@ export const testimonial: TestimonialSection = {
   imageSrc: testimonialImage,
   testimonials: [
     {
-      name: 'John Doe',
-      text: 'Use this as an opportunity to promote what it is like to work with you. High value testimonials include ones from current or past co-workers, managers, or from happy clients.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
-    },
-    {
-      name: 'Jane Doe',
-      text: 'Here you should write some nice things that someone has said about you. Encourage them to be specific and include important details (notes about a project you were on together, impressive quality produced, etc).',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
-    },
-    {
-      name: 'Someone else',
-      text: 'Add several of these, and keep them as fresh as possible, but be sure to focus on quality testimonials with strong highlights of your skills/work ethic.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
+      name: 'Nailson Bulhões',
+      text: 'Pude obter um website funcional e chamativo aos meus requisitos como produtor cultural e publicitário, me ajudou a divulgar meu trabalho e conquistar mais clientes.',
+      image: 'https://nase7ebucket.s3.amazonaws.com/team/nailson-bulhoes-photo.jpeg',
     },
   ],
 };
@@ -335,28 +272,28 @@ export const testimonial: TestimonialSection = {
  */
 
 export const contact: ContactSection = {
-  headerText: 'Get in touch.',
-  description: 'Here is a good spot for a message to your readers to let them know how best to reach out to you.',
+  headerText: 'A apenas um toque de distância.',
+  description: 'Entre em contato para serviços, como criação de websites, orçamentos, requisitos, vamos conversar.',
   items: [
     {
       type: ContactType.Email,
-      text: 'reachout@timbaker.me',
-      href: 'mailto:reachout@timbaker.me',
+      text: 'visoteck.contato@gmail.com',
+      href: 'mailto:visoteck.contato@gmail.com',
     },
     {
       type: ContactType.Location,
-      text: 'Victoria BC, Canada',
-      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
+      text: 'Capanema PA, Brasil',
+      href: 'https://maps.app.goo.gl/vHcJarYswe1rV17v6',
     },
     {
       type: ContactType.Instagram,
-      text: '@tbakerx',
-      href: 'https://www.instagram.com/tbakerx/',
+      text: '@visoteck_websites',
+      href: 'https://www.instagram.com/visoteck_websites?igsh=cHLsOTVoNXBzNHBq',
     },
     {
       type: ContactType.Github,
-      text: 'tbakerx',
-      href: 'https://github.com/tbakerx',
+      text: 'VitorsmX',
+      href: 'https://github.com/VitorsmX',
     },
   ],
 };
@@ -365,9 +302,12 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/reactresume/'},
-  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
+  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/VitorsmX'},
+  {
+    label: 'Stack Overflow',
+    Icon: StackOverflowIcon,
+    href: 'https://stackoverflow.com/users/27062617/vitor-sousa-mesquita-560',
+  },
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/vitorsm10/'},
+  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/visoteck_websites?igsh=cHLsOTVoNXBzNHBq'},
 ];

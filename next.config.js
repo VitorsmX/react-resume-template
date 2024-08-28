@@ -2,7 +2,7 @@
 
 // https://github.com/vercel/next.js/blob/master/packages/next/next-server/server/config.ts
 const nextConfig = {
-  webpack: config => {
+  webpack: (config, { isServer }) => {
     const oneOfRule = config.module.rules.find(rule => rule.oneOf);
 
     // Next 12 has multiple TS loaders, and we need to update all of them.
@@ -11,6 +11,19 @@ const nextConfig = {
     tsRules.forEach(rule => {
       // eslint-disable-next-line no-param-reassign
       rule.include = undefined;
+    });
+
+    // Adicionando a regra para arquivos WEBM
+    config.module.rules.push({
+      test: /\.(webm|mp4|ogg)$/,
+      use: {
+        loader: 'file-loader',
+        options: {
+          name: '[name].[hash].[ext]',
+          outputPath: 'static/videos/',
+          publicPath: '/_next/static/videos/',
+        },
+      },
     });
 
     return config;

@@ -1,6 +1,5 @@
 import {ChevronDownIcon} from '@heroicons/react/24/outline';
 import classNames from 'classnames';
-import Image from 'next/image';
 import {FC, memo} from 'react';
 
 import {heroData, SectionId} from '../../data/data';
@@ -13,13 +12,17 @@ const Hero: FC = memo(() => {
   return (
     <Section noPadding sectionId={SectionId.Hero}>
       <div className="relative flex h-screen w-full items-center justify-center">
-        <Image
+        {/* <Image
           alt={`${name}-image`}
           className="absolute z-0 h-full w-full object-cover"
           placeholder="blur"
           priority
           src={imageSrc}
-        />
+        /> */}
+        <video autoPlay muted loop className="absolute z-0 h-full w-full object-cover blur-[1px]">
+          <source src={imageSrc} type="video/webm" />
+          Seu navegador não suporta o formato de vídeo.
+        </video>
         <div className="z-10  max-w-screen-lg px-4 lg:px-0">
           <div className="flex flex-col items-center gap-y-6 rounded-xl bg-gray-800/40 p-6 text-center shadow-lg backdrop-blur-sm">
             <h1 className="text-4xl font-bold text-white sm:text-5xl lg:text-7xl">{name}</h1>
