@@ -37,6 +37,7 @@ import {
 export const homePageMeta: HomepageMeta = {
   title: 'Portfolio Vitor',
   description: 'Conheça sobre mim e crie seu website já!',
+  ogImageUrl: "/ogimageurl.jpg"
 };
 
 /**
