@@ -65,7 +65,7 @@ export const heroData: Hero = {
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         Sou de Capanema no Pará e um <strong className="text-stone-100">Desenvolvedor Full Stack Javascript</strong>,
-        trabalhando no momento em <strong className="text-stone-100">Sistemas Web</strong>, os quais ajudam meus
+        trabalho em <strong className="text-stone-100">Sistemas Web</strong>que ajudam meus
         clientes a ter uma posição na web, portfolio, e-commerce, compatível com dispositivos móveis.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
@@ -263,6 +263,11 @@ export const testimonial: TestimonialSection = {
       name: 'Nailson Bulhões',
       text: 'Pude obter um website funcional e chamativo aos meus requisitos como produtor cultural e publicitário, me ajudou a divulgar meu trabalho e conquistar mais clientes.',
       image: 'https://nase7ebucket.s3.amazonaws.com/team/nailson-bulhoes-photo.jpeg',
+    },
+    {
+      name: 'Valéria Duarte',
+      text: 'Catálogo muito bem elaborado, com ótimo visual e de fácil entendimento. Profissional pontual, qualificado e comprometido com o que se propôs.',
+      image: 'https://ibb.co/4KwnkGk',
     },
   ],
 };
