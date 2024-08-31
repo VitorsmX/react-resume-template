@@ -27,8 +27,8 @@ const Page: NextPage<PropsWithChildren<HomepageMeta>> = memo(({children, title, 
         <meta content={description} property="og:description" />
         <meta content={`${twitterUrl}${pathname}`} property="og:url" />
         <meta content={ogImageUrl} property="og:image" />
-        <meta property="og:image:width" content="400" />
-        <meta property="og:image:height" content="300" />
+        <meta property="og:image:width" content="800" />
+        <meta property="og:image:height" content="400" />
         <meta property="og:image:alt" content="Portfolio e divulgação para você criar websites profissionais" />
 
         {/* Twitter: https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/markup */}
