@@ -69,7 +69,7 @@ export const heroData: Hero = {
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         Sou de Capanema no Pará e um <strong className="text-stone-100">Desenvolvedor Full Stack Javascript</strong>,
-        trabalho em <strong className="text-stone-100">Sistemas Web</strong>que ajudam meus
+        trabalho em <strong className="text-stone-100">Sistemas Web </strong>que ajudam meus
         clientes a ter uma posição na web, portfolio, e-commerce, compatível com dispositivos móveis.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
