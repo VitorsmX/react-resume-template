@@ -36,10 +36,10 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'Portfolio Vitor',
-  description: 'Conheça sobre mim e crie seu website já!',
+  title: 'Portfólio Visoteck-Vitor',
+  description: 'Conheça a gente e crie seu website já!',
+  twitterUrl: 'https://visoteckgo.vercel.app/',
   ogImageUrl: "https://i.ibb.co/9ZGXvH4/ogimageurl.jpg",
-  twitterCardType: 'summary_large',
   twitterImageUrl: "https://i.ibb.co/9ZGXvH4/ogimageurl.jpg"
 };
 
@@ -89,12 +89,12 @@ export const heroData: Hero = {
     {
       href: `#${SectionId.Contact}`,
       text: 'Contate-me',
-      primary: true,
+      primary: false,
     },
     {
       href: `https://curriculo-marina-md.my.canva.site/tabela-de-servi-os-visoteck`,
       text: 'Tabela de Preços',
-      primary: true,
+      primary: false,
       Icon: CurrencyDollarIcon,
     },
   ],

@@ -5,7 +5,7 @@ import {memo, PropsWithChildren} from 'react';
 
 import {HomepageMeta} from '../../data/dataDef';
 
-const Page: NextPage<PropsWithChildren<HomepageMeta>> = memo(({children, title, description}) => {
+const Page: NextPage<PropsWithChildren<HomepageMeta>> = memo(({children, title, description, ogImageUrl, twitterUrl}) => {
   const {asPath: pathname} = useRouter();
 
   return (
@@ -25,7 +25,11 @@ const Page: NextPage<PropsWithChildren<HomepageMeta>> = memo(({children, title, 
         {/* Open Graph : https://ogp.me/ */}
         <meta content={title} property="og:title" />
         <meta content={description} property="og:description" />
-        <meta content={`https://reactresume.com${pathname}`} property="og:url" />
+        <meta content={`${twitterUrl}${pathname}`} property="og:url" />
+        <meta content={ogImageUrl} property="og:image" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:image:alt" content="Portfolio e divulgação para você criar websites profissionais" />
 
         {/* Twitter: https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/markup */}
         <meta content={title} name="twitter:title" />
