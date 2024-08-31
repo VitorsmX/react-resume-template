@@ -5,6 +5,7 @@ import {
   CalendarIcon,
   FlagIcon,
   MapIcon,
+  CurrencyDollarIcon
 } from '@heroicons/react/24/outline';
 
 import GithubIcon from '../components/Icon/GithubIcon';
@@ -88,7 +89,13 @@ export const heroData: Hero = {
     {
       href: `#${SectionId.Contact}`,
       text: 'Contate-me',
-      primary: false,
+      primary: true,
+    },
+    {
+      href: `https://curriculo-marina-md.my.canva.site/tabela-de-servi-os-visoteck`,
+      text: 'Tabela de Preços',
+      primary: true,
+      Icon: CurrencyDollarIcon,
     },
   ],
 };
