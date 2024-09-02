@@ -12,6 +12,7 @@ const Page: NextPage<PropsWithChildren<HomepageMeta>> = memo(({children, title, 
     <>
       <Head>
         <title>{title}</title>
+        <meta content="https://i.imgur.com/P5AUw2b.jpeg" property="og:image" />
         <meta content={ogImageUrl} property="og:image" />
         <meta content={description} name="description" />
 
