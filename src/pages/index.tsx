@@ -10,9 +10,31 @@ import Portfolio from '../components/Sections/Portfolio';
 import Resume from '../components/Sections/Resume';
 import Testimonials from '../components/Sections/Testimonials';
 import {homePageMeta} from '../data/data';
+import type { Metadata } from 'next';
 
 // eslint-disable-next-line react-memo/require-memo
 const Header = dynamic(() => import('../components/Sections/Header'), {ssr: false});
+
+export const metadata: Metadata = {
+  openGraph: {
+    images: [
+      {
+        url: 'https://i.imgur.com/P5AUw2b.jpeg',
+        width: 800,
+        height: 600,
+        alt: 'Home Page',
+      },
+      {
+        url: 'https://i.imgur.com/P5AUw2b.jpeg',
+        width: 1800,
+        height: 1600,
+        alt: 'Home Page',
+      },
+    ],
+    locale: 'pt_BR',
+    type: 'website',
+  },
+}
 
 const Home: FC = memo(() => {
   const {title, description, ogImageUrl} = homePageMeta;
