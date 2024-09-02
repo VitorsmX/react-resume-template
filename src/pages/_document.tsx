@@ -14,6 +14,12 @@ export default function Document() {
           - https://github.com/facebook/react/issues/11538
           - https://bugs.chromium.org/p/chromium/issues/detail?id=872770 */}
         <meta content="notranslate" name="google" />
+        <meta property="og:image" content="https://i.imgur.com/P5AUw2b.jpeg" />
+        <meta property="og:image:width" content="800" />
+        <meta property="og:image:height" content="600" />
+        <meta property="og:image:alt" content="Home Page" />
+        <meta property="og:locale" content="pt_BR" />
+        <meta property="og:type" content="website" />
       </Head>
       <body className="bg-black">
         <Main />
