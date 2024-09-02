@@ -39,8 +39,8 @@ export const homePageMeta: HomepageMeta = {
   title: 'Portfólio Visoteck-Vitor',
   description: 'Conheça a gente e crie seu website já!',
   twitterUrl: 'https://visoteckgo.vercel.app/',
-  ogImageUrl: "https://i.ibb.co/9ZGXvH4/ogimageurl.jpg",
-  twitterImageUrl: "https://i.ibb.co/9ZGXvH4/ogimageurl.jpg"
+  ogImageUrl: "https://i.imgur.com/P5AUw2b.jpeg",
+  twitterImageUrl: "https://i.imgur.com/P5AUw2b.jpeg"
 };
 
 /**
