@@ -13,13 +13,13 @@ const Page: NextPage<PropsWithChildren<HomepageMeta>> = memo(
       <>
         <Head>
           <title>{title}</title>
-          <meta property="og:image" content="https://i.imgur.com/P5AUw2b.jpeg" />
-          <meta property="og:image:width" content="800" />
-          <meta property="og:image:height" content="600" />
+          <meta property="og:image" content="https://i.imgur.com/CKaPl4m.jpeg" />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="1200" />
           <meta property="og:image:alt" content="Home Page" />
           <meta property="og:locale" content="pt_BR" />
           <meta property="og:type" content="website" />
-          <meta content="https://i.imgur.com/P5AUw2b.jpeg" property="og:image:url" />
+          <meta content="https://i.imgur.com/CKaPl4m.jpeg" property="og:image:url" />
           <meta content={ogImageUrl} property="og:image:url" />
           <meta content="jpeg" property="og:image:type"></meta>
           <meta content={description} name="description" />
