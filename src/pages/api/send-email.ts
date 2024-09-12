@@ -8,7 +8,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const messageWithEmail = `DE: ${email} - nome: ${name} - mensagem: ` + message;
 
     try {
-      await sendEmail('visoteck.contato@gmail.com', name, messageWithEmail);
+      await sendEmail('diocontato.website@gmail.com', name, messageWithEmail);
       return res.status(200).json({message: 'email enviado', status: 200});
     } catch (error) {
       return res.status(500).json({message: 'email não enviado', status: 500});

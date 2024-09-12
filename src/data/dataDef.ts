@@ -49,6 +49,48 @@ export interface AboutItem {
   Icon?: ForwardRefExoticComponent<Omit<SVGProps<SVGSVGElement>, 'ref'>>;
 }
 
+interface PricingItem {
+  name: string;
+  description: string;
+  price: {
+    lower: string;
+    higher: string;
+    isUnique: boolean;
+  }
+  currency: string;
+  period: string;
+  features: string[];
+  cta: {
+    text: string;
+    href: string;
+  };
+  mostPopular?: boolean;
+  Icon?: ForwardRefExoticComponent<Omit<SVGProps<SVGSVGElement>, 'ref'>>;
+}
+
+export interface Pricing {
+  professionalName: {
+    name: string;
+    phoneNumber: {
+      number: string;
+      href: string;
+    }
+  }
+  header: {
+    title: string;
+    subtitle: string;
+  };
+  items: PricingItem[];
+  contacts: {
+    socials: {
+      label: string;
+      href: string;
+      Icon?: ForwardRefExoticComponent<Omit<SVGProps<SVGSVGElement>, 'ref'>>;
+      qrcode: string;
+    };
+  };
+}
+
 /**
  * Stat section
  */
@@ -102,7 +144,7 @@ export interface TestimonialSection {
 }
 
 export interface Testimonial {
-  image?: string;
+  image?: string | StaticImageData;
   name: string;
   text: string;
 }
@@ -144,6 +186,12 @@ export interface ContactValue {
  * Social items
  */
 export interface Social {
+  label: string;
+  Icon: FC<IconProps>;
+  href: string;
+}
+
+export interface SocialCreator {
   label: string;
   Icon: FC<IconProps>;
   href: string;

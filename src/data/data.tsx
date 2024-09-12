@@ -1,24 +1,24 @@
 import {
   AcademicCapIcon,
   ArrowDownTrayIcon,
-  BuildingOffice2Icon,
   CalendarIcon,
   FlagIcon,
+  LinkIcon,
   MapIcon,
-  CurrencyDollarIcon
 } from '@heroicons/react/24/outline';
 
 import GithubIcon from '../components/Icon/GithubIcon';
-import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 import heroImage from '../images/header-background.webm';
-import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
-import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
-import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
-import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
-import profilepic from '../images/profilepic.jpg';
-import testimonialImage from '../images/testimonial.webp';
+import porfolioImage1 from '../images/portfolio/portfolio-1.webp';
+import porfolioImage2 from '../images/portfolio/portfolio-2.png';
+import porfolioImage3 from '../images/portfolio/portfolio-3.png';
+import porfolioImage4 from '../images/portfolio/portfolio-4.png';
+import porfolioImage5 from '../images/portfolio/portfolio-5.png';
+import profilepic from '../images/profilepic.jpeg';
+import testimonialPerson1 from '../images/testimonial/testimonialPerson1.jpg';
+import testimonialsImage from '../images/testimonial/testimonialsImage.webp';
+import ogImageURL from '../../public/ogimageurl.jpeg';
 import {
   About,
   ContactSection,
@@ -28,6 +28,7 @@ import {
   PortfolioItem,
   SkillGroup,
   Social,
+  SocialCreator,
   TestimonialSection,
   TimelineItem,
 } from './dataDef';
@@ -36,11 +37,11 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'Portfólio Visoteck-Vitor',
-  description: 'Conheça a gente e crie seu website já!',
-  twitterUrl: 'https://visoteckgo.vercel.app/',
-  ogImageUrl: "https://i.imgur.com/CKaPl4m.jpeg",
-  twitterImageUrl: "https://i.imgur.com/CKaPl4m.jpeg"
+  title: 'Portfólio Dioclesiano',
+  description: 'Um pouco sobre mim. Veja, aprove, contrate.',
+  twitterUrl: 'https://dioportfolio.vercel.app/',
+  ogImageUrl: ogImageURL,
+  twitterImageUrl: ogImageURL
 };
 
 /**
@@ -54,7 +55,7 @@ export const SectionId = {
   Resume: 'Curriculo',
   Skills: 'Habilidades',
   Stats: 'Estatísticas',
-  Testimonials: 'Clientes',
+  Testimonials: 'Referências',
 } as const;
 
 export type SectionId = (typeof SectionId)[keyof typeof SectionId];
@@ -64,18 +65,13 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `Sou Vitor Mesquita.`,
+  name: `Sou Diocleisiano.`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        Sou de Capanema no Pará e um <strong className="text-stone-100">Desenvolvedor Full Stack Javascript</strong>,
-        trabalho em <strong className="text-stone-100">Sistemas Web </strong>que ajudam meus
-        clientes a ter uma posição na web, portfolio, e-commerce, compatível com dispositivos móveis.
-      </p>
-      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        Posso ajudar seu negócio a crescer, seja ele do tamanho que for, porque{' '}
-        <strong className="text-stone-100">qualquer um</strong>, pode ter uma presença digital com um pouco de vontade
-        de <strong className="text-stone-100">inovar</strong>
+        Sou Brasileiro de nascimento, resido em Portugal, sou um <strong className="text-stone-100">Técnico de Manutenção de Hardware (computador e celular),
+        já trabalhei como Técnico de Informática, de Hardware, Especialista em Cibersegurança e Software Tester</strong>, atualmente, busco uma posição no mercado de
+        T.I em que possa agregar valor a empresa em que estiver.
       </p>
     </>
   ),
@@ -91,12 +87,6 @@ export const heroData: Hero = {
       text: 'Contate-me',
       primary: false,
     },
-    {
-      href: `https://curriculo-marina-md.my.canva.site/tabela-de-servi-os-visoteck`,
-      text: 'Tabela de Preços',
-      primary: false,
-      Icon: CurrencyDollarIcon,
-    },
   ],
 };
 
@@ -105,13 +95,12 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Sou um desenvolvedor web apaixonado por criar soluções inovadoras e eficientes. Com experiência prática em tecnologias como React, Next.js, Tailwind, CSS3 e Typescript, ofereço serviços de desenvolvimento de websites e aplicações web que atendem às necessidades específicas de cada cliente.`,
+  description: `Preciso destacar minha paixão pela tecnologia e por tudo que estudei até aqui. Sei que há um mundo de conhecimentos para serem adquiridos, mas acredito que o pouco de todos os dias trará o sucesso esperado. Busco constantemente aprender e me alinhar com técnicas de CIBERSEGURANÇA, pois a evolução das ameaças cibernéticas são imensas e cada dia que passa o mundo precisa de bons profissionais. Destaco minha vontade de contribuir para a segurança online, protegendo dados e sistemas contra ameaças em um mundo cada vez mais digital, usando uma abordagem proativa para resolver problemas de segurança. Por isso me mantenho atualizado com as melhores práticas e ferramentas de cibersegurança. A proteção das informações confidenciais dos usuários e das organizações também é uma responsabilidade imensa. No entanto, sigo meus estudos para adquirir conhecimentos e aguardo o momento certo para ingressar em uma equipe profissional que tenha objetivos em comum a fim de reforçar as defesas cibernéticas.`,
   aboutItems: [
-    {label: 'Onde Fico', text: 'Capanema, PA', Icon: MapIcon},
-    {label: 'Idade', text: `${new Date().getFullYear() - 2000}`, Icon: CalendarIcon},
+    {label: 'Onde Fico', text: 'Lisboa, PLx', Icon: MapIcon},
+    {label: 'Idade', text: `${Math.floor((new Date().getTime() - new Date(1986, 8, 17).getTime()) / (1000 * 60 * 60 * 24 * 365.25)).toString()}`, Icon: CalendarIcon},
     {label: 'Nacionalidade', text: 'Brasileiro', Icon: FlagIcon},
-    {label: 'Formação', text: 'Faculdade Estácio de Castanhal/ FCAT', Icon: AcademicCapIcon},
-    {label: 'Emprego', text: 'Freelancer', Icon: BuildingOffice2Icon},
+    {label: 'Formação', text: 'Centro de Especialização Tecnológica | Faculdade Pitágoras | Faculdade Descomplica | Citeforma', Icon: AcademicCapIcon},
   ],
 };
 
@@ -128,7 +117,7 @@ export const skills: SkillGroup[] = [
       },
       {
         name: 'Inglês',
-        level: 6,
+        level: 4,
       },
     ],
   },
@@ -136,15 +125,15 @@ export const skills: SkillGroup[] = [
     name: 'Desenvolvimento Front-End',
     skills: [
       {
-        name: 'Next.js',
-        level: 8,
+        name: 'HTML',
+        level: 5,
       },
       {
-        name: 'Typescript',
-        level: 7,
+        name: 'Javascript',
+        level: 6,
       },
       {
-        name: 'SQL',
+        name: 'CSS',
         level: 5,
       },
     ],
@@ -153,16 +142,26 @@ export const skills: SkillGroup[] = [
     name: 'Backend development',
     skills: [
       {
-        name: 'Node.js',
+        name: 'Python',
+        level: 5,
+      },
+    ],
+  },
+  {
+    name: 'Integrations and Version Control',
+    skills: [
+      {
+        name: 'Git and GitHub',
+        level: 5,
+      },
+    ],
+  },
+  {
+    name: 'Hardware',
+    skills: [
+      {
+        name: 'Manutenção de Computadores e Celulares',
         level: 8,
-      },
-      {
-        name: 'Express',
-        level: 7,
-      },
-      {
-        name: 'Nest.js',
-        level: 4,
       },
     ],
   },
@@ -173,28 +172,34 @@ export const skills: SkillGroup[] = [
  */
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: 'Portfolio Nase7e Produtora',
-    description: 'Portfolio digital otimizado para SEO que divulga o trabalho de Nailson Bulhões',
-    url: 'https://www.naseteprodutora.com.br/',
+    title: 'Olá Mundo',
+    description: 'Primeiro Repositório Versionado',
+    url: 'https://github.com/Dioclesiano/Ola-Mundo_na_Tela',
     image: porfolioImage1,
   },
   {
-    title: 'Criação de Cartão de Visita',
-    description: 'Criação de Mídia Social para o Instagram de Instituição Religiosa GEU',
-    url: 'https://www.instagram.com/geu.grupo_espirita_uniao/',
+    title: 'Projeto Android',
+    description: 'Website de informações gerais sobre o sistema android',
+    url: 'https://github.com/Dioclesiano/Projeto_Android',
     image: porfolioImage2,
   },
   {
-    title: 'Criação de Mídia Social Para Campanha Política',
-    description: 'Campanha para vereador de Afrânio Feijão',
-    url: 'https://www.instagram.com/afranio.melo/',
+    title: 'Estudos Sobre Python',
+    description: 'Alguns exercícios resolvidos em Python',
+    url: 'https://github.com/Dioclesiano/Estudos_sobre_Python',
     image: porfolioImage3,
   },
   {
-    title: 'Catálogo Digital e Físico Fetiche',
-    description: 'Catalogo em PDF para divulgação de produtos íntimos',
-    url: 'https://drive.google.com/file/d/1W_MpzrvH84lF1-fMVxr8T4x9ZilxIy8c/view?usp=sharing',
+    title: 'Estudo sobre Javascript',
+    description: 'Estudos e exercícios resolvidos em Javascript',
+    url: 'https://github.com/Dioclesiano/Estudos_sobre_JavaScript',
     image: porfolioImage4,
+  },
+  {
+    title: 'Estudo sobre GitHub',
+    description: 'Estudos e exercícios resolvidos sobre GitHub',
+    url: 'https://github.com/Dioclesiano/Entendendo...',
+    image: porfolioImage5,
   },
 ];
 
@@ -203,63 +208,65 @@ export const portfolioItems: PortfolioItem[] = [
  */
 export const education: TimelineItem[] = [
   {
-    date: 'Novembro, 2016',
-    location: 'São Pio X',
-    title: 'Ensino Fundamental e Médio',
-    content: (
-      <p>
-        Publicação de{' '}
-        <a
-          href="https://www.allprinteditora.com.br/vida-de-moleque-a-grande-aventura"
-          target="_blank"
-          className="font-semibold underline hover:text-blue-600">
-          LIVRO
-        </a>{' '}
-        e organização de peças de teatro e produção audio-visual
-      </p>
-    ),
+    date: '2024',
+    location: 'Citeforma - Lisboa, Portugal',
+    title: 'Técnico Especialista em Gestão de Redes e Sistemas Informáticos',
+    content: <p>'Finalização do curso de Técnico Especialista em Gestão de Redes e Sistemas Informáticos na Citeforma'</p>,
   },
   {
-    date: 'Novembro, 2017',
-    location: 'Colégio Professora Maria Goretti',
-    title: 'Ensino Médio Completo',
-    content: <p>Finalização do ensino médio em outra escola</p>,
+    date: '2023',
+    location: 'Centro de Especialização Tecnológica - Tomar, Portugal',
+    title: 'Técnico Especialista em Cibersegurança',
+    content: <p>Curso técnico de cibersegurança</p>,
   },
   {
-    date: 'Novembro, 2022',
-    location: 'Universidade Estácio de Castanhal/ FCAT',
-    title: 'Graduação Tecnológica',
-    content: (
-      <p>
-        Ministrei dois cursos livres em várias ocasiões, intitulados, "CURSO DE GIT E GITHUB SEM CODAR" e "CURSO DE
-        GOOGLE CLASSROOM", também prestei estágio pela universidade como desenvolvedor de software na área de
-        documentação para a empresa INFOTEMP
-      </p>
-    ),
+    date: '2020',
+    location: 'Faculdade Descomplica, Belo Horizonte - Brasil',
+    title: 'Graduação em Ciências da Computação',
+    content: <p>Finalização do curso de Graduação em Ciência da Computação na Faculdade Descomplica</p>,
+  },
+  {
+    date: '2015',
+    location: 'Faculdade Pitágoras, Belo Horizonte - Brasil',
+    title: 'Técnico de Informática',
+    content: <p>Finalização do curso de Técnico de Informática na Faculdade Pitágoras</p>,
   },
 ];
 
 export const experience: TimelineItem[] = [
   {
-    date: 'Dezembro, 2023 - Março, 2024',
-    location: 'ÊXITOS',
-    title: 'Operador de suporte técnico - Estágio',
+    date: '2022 – 2024',
+    location: 'F5 Consultoria Empresarial, Paraná - Brasil',
+    title: 'Software Tester',
     content: (
       <p>
-        Prestação de suporte por telefone a clientes de serviços de internet, esclarecendo dúvidas, diagnosticando problemas e atendendo solicitações diversas, incluindo agendamento de visitas técnicas, se necessário.
+        Execução de testes de software automatizados em aplicativos e sistemas.
       </p>
       ),
   },
   {
-    date: 'Maio, 2024 - Atualmente',
-    location: 'Home-office',
-    title: 'Freelancer Full-Stack Developer',
-    content: (
-      <p>
-        EXPERIÊNCIA PRÁTICA em desenvolvimento de
-        websites como aplicações web com React, Next.js, Tailwind, CSS3, Typescript na IDE VScode.
-      </p>
-    ),
+    date: '2023',
+    location: ' Instituto Politécnico de Tomar, Portugal',
+    title: 'Especialista em Cibersegurança',
+    content: <p>Experiência prática em Cibersegurança</p>,
+  },
+  {
+    date: '2021 – 2022',
+    location: 'Sonae (Worten Resolve), Alfragide - Portugal',
+    title: 'Técnico de Hardware',
+    content: <p>Experiência prática em manutenção de Hardware</p>,
+  },
+  {
+    date: '2016 – 2019',
+    location: 'SmartPhone Center, Belo Horizonte - Brasil',
+    title: 'Técnico Eletrônico',
+    content: <p>Experiência prática em manuseio e manutenção de celulares</p>,
+  },
+  {
+    date: '2013 – 2015',
+    location: 'Red Zero, Contagem - Brasil',
+    title: 'Técnico de Informática',
+    content: <p>Experiência prática no manuseio e manutenção de equipamentos computacionais</p>,
   },
 ];
 
@@ -267,17 +274,12 @@ export const experience: TimelineItem[] = [
  * Testimonial section
  */
 export const testimonial: TestimonialSection = {
-  imageSrc: testimonialImage,
+  imageSrc: testimonialsImage,
   testimonials: [
     {
-      name: 'Nailson Bulhões',
-      text: 'Pude obter um website funcional e chamativo aos meus requisitos como produtor cultural e publicitário, me ajudou a divulgar meu trabalho e conquistar mais clientes.',
-      image: 'https://nase7ebucket.s3.amazonaws.com/team/nailson-bulhoes-photo.jpeg',
-    },
-    {
-      name: 'Valéria Duarte',
-      text: 'Catálogo muito bem elaborado, com ótimo visual e de fácil entendimento. Profissional pontual, qualificado e comprometido com o que se propôs.',
-      image: 'https://i.ibb.co/vVC69G9/fetiche-logo.jpg',
+      name: 'Vitor Mesquita',
+      text: 'Profissional capacitado em cibersegurança, com conhecimento e experiência em testes de cibersegurança. Atualmente, sou desenvolvedor web e este profissional busca se aprimorar a cada dia.',
+      image: testimonialPerson1,
     },
   ],
 };
@@ -288,27 +290,22 @@ export const testimonial: TestimonialSection = {
 
 export const contact: ContactSection = {
   headerText: 'A apenas um toque de distância.',
-  description: 'Entre em contato para serviços, como criação de websites, orçamentos, requisitos, vamos conversar.',
+  description: 'Entre em contato para serviços ou ofertas de vagas, vamos conversar.',
   items: [
     {
       type: ContactType.Email,
-      text: 'visoteck.contato@gmail.com',
-      href: 'mailto:visoteck.contato@gmail.com',
+      text: 'diocontato.website@gmail.com',
+      href: 'mailto:diocontato.website@gmail.com',
     },
     {
       type: ContactType.Location,
-      text: 'Capanema PA, Brasil',
-      href: 'https://maps.app.goo.gl/vHcJarYswe1rV17v6',
-    },
-    {
-      type: ContactType.Instagram,
-      text: '@visoteck_websites',
-      href: 'https://www.instagram.com/visoteck_websites?igsh=cHLsOTVoNXBzNHBq',
+      text: 'Lisboa, PLx, Portugal',
+      href: 'https://maps.app.goo.gl/dyYrGwAqxgcF955z6',
     },
     {
       type: ContactType.Github,
-      text: 'VitorsmX',
-      href: 'https://github.com/VitorsmX',
+      text: 'Dioclesiano',
+      href: 'https://github.com/Dioclesiano',
     },
   ],
 };
@@ -317,12 +314,14 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
+  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/Dioclesiano'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/dioclesianopaz/'},
+];
+
+// Socials from website creator
+
+export const socialLinksCreator: SocialCreator[] = [
   {label: 'Github', Icon: GithubIcon, href: 'https://github.com/VitorsmX'},
-  {
-    label: 'Stack Overflow',
-    Icon: StackOverflowIcon,
-    href: 'https://stackoverflow.com/users/27062617/vitor-sousa-mesquita-560',
-  },
   {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/vitorsm10/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/visoteck_websites?igsh=cHLsOTVoNXBzNHBq'},
+  {label: 'Website', Icon: LinkIcon, href: 'https://visoteckgo.vercel.app/'},
 ];

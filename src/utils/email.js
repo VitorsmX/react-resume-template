@@ -7,7 +7,7 @@ const transporter = nodemailer.createTransport({
   port: 587, // Porta do servidor SMTP
   secure: false, // true para 465, false para outras portas
   auth: {
-    user: 'visoteck.contato@gmail.com', // Seu email
+    user: 'diocontato.website@gmail.com', // Seu email
     pass: `${process.env.APP_PASS_GMAIL}`, // Sua senha
   },
 });
@@ -17,7 +17,7 @@ const transporter = nodemailer.createTransport({
 const sendEmail = async (to, subject, text) => {
   const mailOptions = {
     from: to,
-    to: 'visoteck.contato@gmail.com',
+    to: 'diocontato.website@gmail.com',
     subject,
     text,
   };

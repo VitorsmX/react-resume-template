@@ -8,6 +8,7 @@ import useInterval from '../../hooks/useInterval';
 import useWindow from '../../hooks/useWindow';
 import QuoteIcon from '../Icon/QuoteIcon';
 import Section from '../Layout/Section';
+import Image from 'next/image';
 
 const Testimonials: FC = memo(() => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
@@ -121,9 +122,9 @@ const Testimonial: FC<{testimonial: Testimonial; isActive: boolean}> = memo(
         isActive ? 'opacity-100' : 'opacity-0',
       )}>
       {image ? (
-        <div className="relative h-14 w-14 shrink-0 sm:h-16 sm:w-16">
+        <div className="relative h-24 w-24 shrink-0 sm:h-32 sm:w-32">
           <QuoteIcon className="absolute -left-2 -top-2 h-4 w-4 stroke-black text-white" />
-          <img className="h-full w-full rounded-full" src={image} />
+          <Image alt="Testimonial Person" className="h-full w-full object-cover" placeholder="blur" src={image} />
         </div>
       ) : (
         <QuoteIcon className="h-5 w-5 shrink-0 text-white sm:h-8 sm:w-8" />
