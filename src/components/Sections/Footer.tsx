@@ -2,7 +2,7 @@ import {BoltIcon, ChevronUpIcon} from '@heroicons/react/24/solid';
 import {FC, memo} from 'react';
 
 import {SectionId} from '../../data/data';
-import SocialsCreator from '../SocialsCreator';
+import Socials from '../Socials';
 
 const currentYear = new Date().getFullYear();
 
@@ -17,11 +17,11 @@ const Footer: FC = memo(() => (
     </div>
     <div className="flex flex-col items-center gap-y-6">
       <div className="flex gap-x-4 text-neutral-500">
-        <SocialsCreator />
+        <Socials />
       </div>
       <a
         className="-m-2 flex items-center gap-x-1 rounded-md p-2 ring-yellow focus:outline-none focus:ring-2"
-        href="https://visoteckgo.vercel.app/" target="_blank">
+        href="/">
         <BoltIcon className="h-5 w-5 text-yellow" />
         <span>
           Provided by <span className="text-white">Visoteck</span>

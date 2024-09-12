@@ -1,6 +1,6 @@
 /* eslint-env node */
 module.exports = {
-  siteUrl: 'https://dioportfolio.vercel.app/',
+  siteUrl: 'https://visoteckgo.vercel.app/',
   exclude: ['/404*', '/500*'],
   transform: async (config, path) => {
     return {
