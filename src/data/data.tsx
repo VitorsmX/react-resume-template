@@ -17,6 +17,7 @@ import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
 import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
 import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
+import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import {
@@ -177,6 +178,12 @@ export const portfolioItems: PortfolioItem[] = [
     description: 'Portfolio digital otimizado para SEO que divulga o trabalho de Nailson Bulhões',
     url: 'https://www.naseteprodutora.com.br/',
     image: porfolioImage1,
+  },
+  {
+    title: 'Portfolio Dioclesiano',
+    description: 'Website de Portfolio para o cliente Dioclesiano Paz',
+    url: 'https://dioportfolio.vercel.app/',
+    image: porfolioImage5,
   },
   {
     title: 'Criação de Cartão de Visita',
