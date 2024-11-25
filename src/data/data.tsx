@@ -174,9 +174,9 @@ export const skills: SkillGroup[] = [
  */
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: 'Portfolio Nase7e Produtora',
-    description: 'Portfolio digital otimizado para SEO que divulga o trabalho de Nailson Bulhões',
-    url: 'https://www.naseteprodutora.com.br/',
+    title: 'BLOG/ Biblioteca Virtual do Grupo Espírita União',
+    description: 'Blog e Biblioteca digital otimizado para SEO que divulga o trabalho do Grupo Espírita União',
+    url: 'https://www.geuuniao.com.br/',
     image: porfolioImage1,
   },
   {
