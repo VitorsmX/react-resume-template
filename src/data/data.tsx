@@ -93,7 +93,7 @@ export const heroData: Hero = {
       primary: false,
     },
     {
-      href: `https://curriculo-marina-md.my.canva.site/tabela-de-servi-os-visoteck`,
+      href: `https://curriculo-marina-md.my.canva.site/tabela-servicos-visoteck`,
       text: 'Tabela de Preços',
       primary: false,
       Icon: CurrencyDollarIcon,
@@ -174,7 +174,7 @@ export const skills: SkillGroup[] = [
  */
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: 'BLOG/ Biblioteca Virtual do Grupo Espírita União',
+    title: 'BLOG e Biblioteca Virtual do Grupo Espírita União',
     description: 'Blog e Biblioteca digital otimizado para SEO que divulga o trabalho do Grupo Espírita União',
     url: 'https://www.geuuniao.com.br/',
     image: porfolioImage1,
@@ -186,16 +186,10 @@ export const portfolioItems: PortfolioItem[] = [
     image: porfolioImage5,
   },
   {
-    title: 'Criação de Cartão de Visita',
+    title: 'Criação e Gerência de Social Media',
     description: 'Criação de Mídia Social para o Instagram de Instituição Religiosa GEU',
     url: 'https://www.instagram.com/geu.grupo_espirita_uniao/',
     image: porfolioImage2,
-  },
-  {
-    title: 'Criação de Mídia Social Para Campanha Política',
-    description: 'Campanha para vereador de Afrânio Feijão',
-    url: 'https://www.instagram.com/afranio.melo/',
-    image: porfolioImage3,
   },
   {
     title: 'Catálogo Digital e Físico Fetiche',
@@ -276,11 +270,6 @@ export const experience: TimelineItem[] = [
 export const testimonial: TestimonialSection = {
   imageSrc: testimonialImage,
   testimonials: [
-    {
-      name: 'Nailson Bulhões',
-      text: 'Pude obter um website funcional e chamativo aos meus requisitos como produtor cultural e publicitário, me ajudou a divulgar meu trabalho e conquistar mais clientes.',
-      image: 'https://nase7ebucket.s3.amazonaws.com/team/nailson-bulhoes-photo.jpeg',
-    },
     {
       name: 'Valéria Duarte',
       text: 'Catálogo muito bem elaborado, com ótimo visual e de fácil entendimento. Profissional pontual, qualificado e comprometido com o que se propôs.',
